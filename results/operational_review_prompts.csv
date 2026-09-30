@@ -1,0 +1,4 @@
+region,community_change_pct,ed_change_pct,hospitalisation_change_pct,ed_minus_community_pp,hospital_minus_community_pp,operational_review_prompt,suggested_question
+Gippsland,1.5,10.9,4.2,9.4,2.7,TRUE,"What changed in demand, acuity, access, capacity, pathways or coding between 2022-23 and 2023-24?"
+Murray,9.1,13.2,11.7,4.1,2.5,TRUE,"What changed in demand, acuity, access, capacity, pathways or coding between 2022-23 and 2023-24?"
+Western Victoria,9.5,29,9.8,19.6,0.4,TRUE,"What changed in demand, acuity, access, capacity, pathways or coding between 2022-23 and 2023-24?"

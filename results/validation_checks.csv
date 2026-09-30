@@ -1,0 +1,7 @@
+check,passed
+54 expected observations,TRUE
+Unique region-service-year keys,TRUE
+Complete 3-region x 3-service x 6-year panel,TRUE
+All selected all-age rates published,TRUE
+All rates finite and non-negative,TRUE
+Positive 2018-19 baseline for percentage changes,TRUE

@@ -1,0 +1,10 @@
+region,service,baseline_rate,latest_rate,rate_change,five_year_change_pct,latest_annual_change_pct
+Gippsland,Community contacts,3456,4153,697,20.2,1.5
+Gippsland,ED presentations,125,112,-13,-10.4,10.9
+Gippsland,Hospitalisations,143,150,7,4.9,4.2
+Murray,Community contacts,3738,5086,1348,36.1,9.1
+Murray,ED presentations,127,120,-7,-5.5,13.2
+Murray,Hospitalisations,132,134,2,1.5,11.7
+Western Victoria,Community contacts,3429,4459,1030,30,9.5
+Western Victoria,ED presentations,83,80,-3,-3.6,29
+Western Victoria,Hospitalisations,124,134,10,8.1,9.8

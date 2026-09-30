@@ -1,0 +1,55 @@
+region,geography,financial_year,year,service,age_group,rate_per_10000,raw_value,publication_status,source_file,index_2018_19,annual_change_pct
+Gippsland,PHN,2018–19,2018,Community contacts,Total,3456,"3,456",published,gippsland.csv,100,NA
+Gippsland,PHN,2019–20,2019,Community contacts,Total,3392,"3,392",published,gippsland.csv,98.14814814814815,-1.851851851851849
+Gippsland,PHN,2020–21,2020,Community contacts,Total,2821,"2,821",published,gippsland.csv,81.6261574074074,-16.83372641509434
+Gippsland,PHN,2021–22,2021,Community contacts,Total,3032,"3,032",published,gippsland.csv,87.73148148148148,7.479617157036511
+Gippsland,PHN,2022–23,2022,Community contacts,Total,4092,"4,092",published,gippsland.csv,118.40277777777777,34.96042216358839
+Gippsland,PHN,2023–24,2023,Community contacts,Total,4153,"4,153",published,gippsland.csv,120.16782407407408,1.4907135874877797
+Gippsland,PHN,2018–19,2018,ED presentations,Total,125,125,published,gippsland.csv,100,NA
+Gippsland,PHN,2019–20,2019,ED presentations,Total,124,124,published,gippsland.csv,99.2,-0.8000000000000007
+Gippsland,PHN,2020–21,2020,ED presentations,Total,119,119,published,gippsland.csv,95.2,-4.0322580645161255
+Gippsland,PHN,2021–22,2021,ED presentations,Total,105,105,published,gippsland.csv,84,-11.764705882352944
+Gippsland,PHN,2022–23,2022,ED presentations,Total,101,101,published,gippsland.csv,80.8,-3.809523809523807
+Gippsland,PHN,2023–24,2023,ED presentations,Total,112,112,published,gippsland.csv,89.6,10.8910891089109
+Gippsland,PHN,2018–19,2018,Hospitalisations,Total,143,143,published,gippsland.csv,100,NA
+Gippsland,PHN,2019–20,2019,Hospitalisations,Total,162,162,published,gippsland.csv,113.2867132867133,13.286713286713292
+Gippsland,PHN,2020–21,2020,Hospitalisations,Total,156,156,published,gippsland.csv,109.0909090909091,-3.703703703703709
+Gippsland,PHN,2021–22,2021,Hospitalisations,Total,141,141,published,gippsland.csv,98.6013986013986,-9.615384615384615
+Gippsland,PHN,2022–23,2022,Hospitalisations,Total,144,144,published,gippsland.csv,100.6993006993007,2.127659574468077
+Gippsland,PHN,2023–24,2023,Hospitalisations,Total,150,150,published,gippsland.csv,104.8951048951049,4.166666666666674
+Murray,PHN,2018–19,2018,Community contacts,Total,3738,"3,738",published,murray.csv,100,NA
+Murray,PHN,2019–20,2019,Community contacts,Total,4027,"4,027",published,murray.csv,107.73140716960941,7.731407169609428
+Murray,PHN,2020–21,2020,Community contacts,Total,3677,"3,677",published,murray.csv,98.3681112894596,-8.691333498882548
+Murray,PHN,2021–22,2021,Community contacts,Total,3424,"3,424",published,murray.csv,91.59978598180845,-6.88060919227631
+Murray,PHN,2022–23,2022,Community contacts,Total,4660,"4,660",published,murray.csv,124.66559657570893,36.0981308411215
+Murray,PHN,2023–24,2023,Community contacts,Total,5086,"5,086",published,murray.csv,136.06206527554843,9.141630901287545
+Murray,PHN,2018–19,2018,ED presentations,Total,127,127,published,murray.csv,100,NA
+Murray,PHN,2019–20,2019,ED presentations,Total,126,126,published,murray.csv,99.21259842519684,-0.7874015748031482
+Murray,PHN,2020–21,2020,ED presentations,Total,127,127,published,murray.csv,100,0.7936507936507908
+Murray,PHN,2021–22,2021,ED presentations,Total,114,114,published,murray.csv,89.76377952755905,-10.236220472440948
+Murray,PHN,2022–23,2022,ED presentations,Total,106,106,published,murray.csv,83.46456692913385,-7.017543859649122
+Murray,PHN,2023–24,2023,ED presentations,Total,120,120,published,murray.csv,94.48818897637796,13.207547169811317
+Murray,PHN,2018–19,2018,Hospitalisations,Total,132,132,published,murray.csv,100,NA
+Murray,PHN,2019–20,2019,Hospitalisations,Total,126,126,published,murray.csv,95.45454545454545,-4.545454545454541
+Murray,PHN,2020–21,2020,Hospitalisations,Total,135,135,published,murray.csv,102.27272727272727,7.14285714285714
+Murray,PHN,2021–22,2021,Hospitalisations,Total,130,130,published,murray.csv,98.48484848484848,-3.703703703703709
+Murray,PHN,2022–23,2022,Hospitalisations,Total,120,120,published,murray.csv,90.9090909090909,-7.692307692307687
+Murray,PHN,2023–24,2023,Hospitalisations,Total,134,134,published,murray.csv,101.51515151515152,11.66666666666667
+Western Victoria,PHN,2018–19,2018,Community contacts,Total,3429,"3,429",published,western_victoria.csv,100,NA
+Western Victoria,PHN,2019–20,2019,Community contacts,Total,3827,"3,827",published,western_victoria.csv,111.6068824730242,11.606882473024216
+Western Victoria,PHN,2020–21,2020,Community contacts,Total,3205,"3,205",published,western_victoria.csv,93.46748323126276,-16.25293963940423
+Western Victoria,PHN,2021–22,2021,Community contacts,Total,3253,"3,253",published,western_victoria.csv,94.86730825313502,1.4976599063962537
+Western Victoria,PHN,2022–23,2022,Community contacts,Total,4074,"4,074",published,western_victoria.csv,118.81014873140857,25.23824162311712
+Western Victoria,PHN,2023–24,2023,Community contacts,Total,4459,"4,459",published,western_victoria.csv,130.0379119276757,9.450171821305853
+Western Victoria,PHN,2018–19,2018,ED presentations,Total,83,83,published,western_victoria.csv,100,NA
+Western Victoria,PHN,2019–20,2019,ED presentations,Total,86,86,published,western_victoria.csv,103.6144578313253,3.6144578313253017
+Western Victoria,PHN,2020–21,2020,ED presentations,Total,81,81,published,western_victoria.csv,97.59036144578313,-5.813953488372093
+Western Victoria,PHN,2021–22,2021,ED presentations,Total,66,66,published,western_victoria.csv,79.51807228915662,-18.518518518518523
+Western Victoria,PHN,2022–23,2022,ED presentations,Total,62,62,published,western_victoria.csv,74.6987951807229,-6.060606060606055
+Western Victoria,PHN,2023–24,2023,ED presentations,Total,80,80,published,western_victoria.csv,96.3855421686747,29.032258064516125
+Western Victoria,PHN,2018–19,2018,Hospitalisations,Total,124,124,published,western_victoria.csv,100,NA
+Western Victoria,PHN,2019–20,2019,Hospitalisations,Total,121,121,published,western_victoria.csv,97.58064516129032,-2.4193548387096753
+Western Victoria,PHN,2020–21,2020,Hospitalisations,Total,127,127,published,western_victoria.csv,102.41935483870968,4.958677685950419
+Western Victoria,PHN,2021–22,2021,Hospitalisations,Total,121,121,published,western_victoria.csv,97.58064516129032,-4.7244094488189
+Western Victoria,PHN,2022–23,2022,Hospitalisations,Total,122,122,published,western_victoria.csv,98.38709677419355,0.8264462809917328
+Western Victoria,PHN,2023–24,2023,Hospitalisations,Total,134,134,published,western_victoria.csv,108.06451612903226,9.836065573770503
