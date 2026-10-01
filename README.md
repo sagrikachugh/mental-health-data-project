@@ -13,6 +13,7 @@ It provides a concise, descriptive briefing on community mental-health contacts,
 ## Repository contents
 
 - `analysis.R` — cleans and validates the source exports, calculates trends and percentage changes, and recreates all outputs.
+- `R/briefing_helpers.R` — validates briefing inputs and derives dashboard metrics, tables and data-driven narrative.
 - `index.qmd` — Quarto source for the management-style analytical briefing.
 - `docs/` — rendered GitHub Pages briefing.
 - `data/raw/` — original AIHW dashboard exports.

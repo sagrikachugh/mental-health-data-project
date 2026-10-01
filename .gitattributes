@@ -1,0 +1,2 @@
+# Quarto build output is generated from index.qmd and R source.
+docs/** linguist-generated=true
