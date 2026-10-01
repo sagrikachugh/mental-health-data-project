@@ -1,5 +1,7 @@
 # Victorian regional mental-health service utilisation
 
+[View the briefing dashboard](https://sagrikachugh.github.io/mental-health-data-project/) · [Review the source code](https://github.com/sagrikachugh/mental-health-data-project)
+
 ## Executive Summary
 
 This briefing examines how population-based mental-health service utilisation changed across the Gippsland, Murray and Western Victoria Primary Health Networks (PHNs) from 2018–19 to 2023–24. It uses Australian Institute of Health and Welfare (AIHW) all-age rates for community mental-health contacts, emergency department (ED) presentations and hospitalisations.

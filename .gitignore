@@ -3,3 +3,6 @@
 .RData
 .Rproj.user/
 Rplots.pdf
+
+/.quarto/
+**/*.quarto_ipynb

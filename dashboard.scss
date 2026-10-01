@@ -1,0 +1,87 @@
+/*-- scss:defaults --*/
+$primary: #005a70;
+$secondary: #52656f;
+$success: #2c6e63;
+$info: #2c699a;
+$warning: #a85d00;
+$danger: #a23b3b;
+$light: #f4f7f8;
+$dark: #16272e;
+$body-bg: #f3f6f7;
+$body-color: #18272e;
+$font-family-sans-serif: "Inter", "Aptos", "Segoe UI", Arial, sans-serif;
+$headings-font-weight: 650;
+$border-radius: 0.45rem;
+
+/*-- scss:rules --*/
+.navbar {
+  border-bottom: 3px solid #e2b23d;
+  box-shadow: 0 2px 8px rgba(17, 39, 49, 0.08);
+}
+.navbar-brand { letter-spacing: -0.015em; }
+.dashboard-page { background: #f3f6f7; }
+.dashboard-card {
+  border: 1px solid #d5dfe3;
+  box-shadow: 0 2px 8px rgba(17, 39, 49, 0.06);
+}
+.card-header {
+  color: #17313b;
+  background: #ffffff;
+  border-bottom: 1px solid #d5dfe3;
+  font-weight: 700;
+}
+.valuebox { min-height: 132px; }
+.valuebox .value-box-value {
+  font-weight: 750;
+  letter-spacing: -0.025em;
+}
+.valuebox .value-box-title,
+.valuebox .value-box-value,
+.valuebox .bi {
+  color: #ffffff !important;
+}
+.briefing-question {
+  margin: 0 0 0.9rem;
+  padding: 0.85rem 1rem;
+  background: #e8f1f4;
+  border-left: 5px solid #005a70;
+  border-radius: 0.25rem;
+  color: #17313b;
+}
+.interpretation-boundary {
+  margin-top: 0.75rem;
+  padding: 0.75rem 0.9rem;
+  background: #fff7e4;
+  border-left: 4px solid #a85d00;
+  color: #4f3b16;
+  font-size: 0.92rem;
+}
+.dashboard-card img {
+  width: 100%;
+  height: auto;
+}
+.dashboard-card table { font-size: 0.9rem; }
+.dashboard-card th {
+  background: #e8f1f4;
+  color: #17313b;
+}
+.dashboard-card td,
+.dashboard-card th {
+  padding: 0.55rem 0.65rem;
+  border-color: #d5dfe3;
+}
+.source-note {
+  color: #52656f;
+  font-size: 0.82rem;
+}
+.takeaway {
+  margin-top: 0.65rem;
+  padding-top: 0.65rem;
+  border-top: 1px solid #d5dfe3;
+  color: #314750;
+  font-size: 0.9rem;
+}
+@media (max-width: 768px) {
+  .valuebox { min-height: 112px; }
+  .dashboard-card table { font-size: 0.8rem; }
+}
