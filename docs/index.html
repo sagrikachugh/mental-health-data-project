@@ -6,7 +6,6 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Sagrika Chugh">
 
 <title>Victorian regional mental-health service utilisation</title>
 <style>
@@ -27,41 +26,6 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-/* CSS for syntax highlighting */
-html { -webkit-text-size-adjust: 100%; }
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-}
 </style>
 
 
@@ -72,209 +36,216 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="index_files/libs/quarto-html/tippy.umd.min.js"></script>
 <script src="index_files/libs/quarto-html/anchor.min.js"></script>
 <link href="index_files/libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="index_files/libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="index_files/libs/quarto-html/quarto-syntax-highlighting-dark-b85bc7c33db8c58e0ec93c3465666fed.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="index_files/libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<link href="index_files/libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="index_files/libs/bootstrap/bootstrap.min.js"></script>
 <link href="index_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="index_files/libs/bootstrap/bootstrap-e7a9afc51e55f9b90963d4554a82937e.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="index_files/libs/bootstrap/bootstrap-dark-e7a9afc51e55f9b90963d4554a82937e.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="light">
-<link href="index_files/libs/bootstrap/bootstrap-e7a9afc51e55f9b90963d4554a82937e.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
-<script src="index_files/libs/quarto-dashboard/quarto-dashboard.js"></script>
-<script src="index_files/libs/quarto-dashboard/stickythead.js"></script>
-
-
-
-<script src="index_files/libs/quarto-dashboard/web-components.js" type="module"></script>
-<script src="index_files/libs/quarto-dashboard/components.js"></script>
-
+<link href="index_files/libs/bootstrap/bootstrap-6f564578f99e7fbe75353e599de2ac43.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<style>html{ scroll-behavior: smooth; }</style>
 
 
 </head>
 
-<body class="quarto-dashboard fullcontent quarto-light">
+<body class="quarto-light">
 
-<header id="quarto-dashboard-header">
-<nav class="navbar navbar-expand-md slim" data-bs-theme="dark">
-  <div class="navbar-container container-fluid">
-    <button class="navbar-toggler hidden" type="button" data-bs-toggle="collapse" data-bs-target="#dashboard-collapse" aria-controls="dashboard-collapse" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>    
+<div id="quarto-content" class="page-columns page-rows-contents page-layout-full">
+
+<main class="content column-page" id="quarto-document-content">
 
 
-    <div class="navbar-brand-container">
 
 
-      <div class="navbar-title">
-        <div class="navbar-title-text"><a href="#">Victorian regional mental-health service utilisation</a></div>
-        
-        <div class="navbar-author">Sagrika Chugh</div>
-      </div>
-    </div>
-<div class="quarto-dashboard-links"><a class="quarto-dashboard-link" href="https://github.com/sagrikachugh/mental-health-data-project" aria-label="View source code on GitHub"><i class="bi bi-github"></i></a><a class="quarto-dashboard-link" href="https://sagrikachugh.github.io/" aria-label="View portfolio"><i class="bi bi-house"></i></a></div></div>
+<nav class="brief-nav" aria-label="Briefing navigation">
+<span>Health service analytics · Portfolio case study</span> <span class="brief-nav-links"> <a href="#summary">Summary</a> <a href="#trends">Trends</a> <a href="#profile">Regional profile</a> <a href="#review">Operational review</a> <a href="#methods">Methods</a> <a href="https://github.com/sagrikachugh/mental-health-data-project">Source code</a> </span>
 </nav>
-</header>
-<div class="page-layout-custom quarto-dashboard-content bslib-gap-spacing html-fill-container dashboard-scrolling">  
-
-<div class="briefing-question bslib-grid-item html-fill-item">
-<p><strong>Business question:</strong> How has mental-health service utilisation changed across regional Victorian PHNs, and which patterns warrant further operational review?</p>
-</div>
-<p>This dashboard summarises published all-age rates for Gippsland, Murray and Western Victoria from 2018–19 to 2023–24. It is designed for descriptive performance reporting and monitoring.</p>
-<div class="interpretation-boundary bslib-grid-item html-fill-item">
-<p><strong>Interpretation boundary:</strong> Activity rates describe service utilisation. They do not measure quality, unmet need or outcomes, and they cannot establish that changes in one care setting caused changes in another.</p>
-</div>
-<div class="bslib-grid-item html-fill-item bslib-grid" data-layout="flow" style="display: grid; grid-template-rows: minmax(3em, max-content) minmax(3em, 1fr) minmax(3em, 1fr) minmax(3em, 1fr) minmax(3em, 1fr) minmax(3em, 1fr) minmax(3em, 1fr); grid-auto-columns: minmax(0, 1fr);">
-<div class="flow bslib-grid" data-layout="flow" style="display: grid; grid-template-columns: minmax(3em, 1fr) minmax(3em, 1fr) minmax(3em, 1fr) minmax(3em, 1fr);
-grid-auto-rows: minmax(0, 1fr);">
-<div class="card valuebox cell bslib-card html-fill-container bslib-value-box showcase-left-center" data-bslib-card-init="" data-require-bs-caller="card()" style=" background: #005a70;">
-<div class="card-body html-fill-item html-fill-container">
-<div class="html-fill-item html-fill-container value-box-grid">
-<div class="value-box-showcase html-fill-item html-fill-container">
-
-<i class="bi bi-graph-up-arrow"></i></div>
-<div class="value-box-area">
-<p class="value-box-title">
-Largest five-year community growth
+<div class="brief-header">
+<div>
+<p class="brief-eyebrow">
+Independent analytical briefing
 </p>
-<p class="value-box-value">
-+36.1%
+<section id="victorian-regional-mental-health-service-utilisation" class="level1">
+<h1>Victorian regional mental-health service utilisation</h1>
+<p class="brief-deck">
+A descriptive assessment of community and acute mental-health service activity across Gippsland, Murray and Western Victoria.
 </p>
+<div class="business-question">
+<strong>Business question</strong><br>How has mental-health service utilisation changed across regional Victorian PHNs, and which patterns warrant further operational review?
+</div>
+</section>
+</div>
+<div class="brief-meta">
+<dl>
+<div>
+<dt>
+Reporting period
+</dt>
+<dd>
+2018–19 to 2023–24
+</dd>
+</div>
+<div>
+<dt>
+Geography
+</dt>
+<dd>
+Three regional Victorian PHNs
+</dd>
+</div>
+<div>
+<dt>
+Measures
+</dt>
+<dd>
+All-age crude rates per 10,000
+</dd>
+</div>
+<div>
+<dt>
+Source
+</dt>
+<dd>
+Australian Institute of Health and Welfare
+</dd>
+</div>
+<div>
+<dt>
+Prepared by
+</dt>
+<dd>
+Sagrika Chugh
+</dd>
+</div>
+</dl>
 </div>
 </div>
+<div class="metric-strip" aria-label="Headline indicators">
+<div class="metric">
+<p><span class="metric-value">+36.1%</span> <span class="metric-label">Largest five-year community growth</span> <span class="metric-context">Murray, 2018–19 to 2023–24</span></p>
 </div>
-<script data-bslib-card-init="">bslib.Card.initializeAllCards();</script></div><div class="card valuebox cell bslib-card html-fill-container bslib-value-box showcase-left-center" data-bslib-card-init="" data-require-bs-caller="card()" style=" background: #2c6e63;">
-<div class="card-body html-fill-item html-fill-container">
-<div class="html-fill-item html-fill-container value-box-grid">
-<div class="value-box-showcase html-fill-item html-fill-container">
-
-<i class="bi bi-people"></i></div>
-<div class="value-box-area">
-<p class="value-box-title">
-Murray community contacts
-</p>
-<p class="value-box-value">
-5,086 per 10,000
-</p>
+<div class="metric">
+<p><span class="metric-value">5,086</span> <span class="metric-label">Community contacts per 10,000</span> <span class="metric-context">Murray, 2023–24</span></p>
+</div>
+<div class="metric">
+<p><span class="metric-value">29.0%</span> <span class="metric-label">Largest latest-year ED increase</span> <span class="metric-context">Western Victoria, 2022–23 to 2023–24</span></p>
+</div>
+<div class="metric">
+<p><span class="metric-value">933</span> <span class="metric-label">Community-contact regional range</span> <span class="metric-context">Rate difference, 2023–24</span></p>
 </div>
 </div>
+<section id="summary" class="level2">
+<h2 class="anchored" data-anchor-id="summary">Executive brief</h2>
+<div class="executive-grid">
+<div>
+<ol class="key-findings">
+<li>
+<strong>Community-contact rates increased across all three PHNs.</strong> Five-year growth ranged from 20.2% in Gippsland to 36.1% in Murray.
+</li>
+<li>
+<strong>Acute-care rates were comparatively stable over five years.</strong> ED presentation rates were lower in 2023–24 than in 2018–19 in every PHN; hospitalisation rates increased by between 1.5% and 8.1%.
+</li>
+<li>
+<strong>The latest year differed from the longer pattern.</strong> ED and hospitalisation rates grew faster than community contacts in every PHN between 2022–23 and 2023–24.
+</li>
+<li>
+<strong>Regional profiles differ.</strong> Murray recorded the highest latest community-contact and ED rates; Gippsland recorded the highest hospitalisation rate.
+</li>
+</ol>
 </div>
-<script data-bslib-card-init="">bslib.Card.initializeAllCards();</script></div><div class="card valuebox cell bslib-card html-fill-container bslib-value-box showcase-left-center" data-bslib-card-init="" data-require-bs-caller="card()" style=" background: #a85d00;">
-<div class="card-body html-fill-item html-fill-container">
-<div class="html-fill-item html-fill-container value-box-grid">
-<div class="value-box-showcase html-fill-item html-fill-container">
-
-<i class="bi bi-hospital"></i></div>
-<div class="value-box-area">
-<p class="value-box-title">
-Largest latest-year ED increase
-</p>
-<p class="value-box-value">
-29.0%
-</p>
-</div>
-</div>
-</div>
-<script data-bslib-card-init="">bslib.Card.initializeAllCards();</script></div><div class="card valuebox cell bslib-card html-fill-container bslib-value-box showcase-left-center" data-bslib-card-init="" data-require-bs-caller="card()" style=" background: #52656f;">
-<div class="card-body html-fill-item html-fill-container">
-<div class="html-fill-item html-fill-container value-box-grid">
-<div class="value-box-showcase html-fill-item html-fill-container">
-
-<i class="bi bi-arrows-expand"></i></div>
-<div class="value-box-area">
-<p class="value-box-title">
-2023–24 community regional range
-</p>
-<p class="value-box-value">
-933 per 10,000
-</p>
-</div>
-</div>
-</div>
-<script data-bslib-card-init="">bslib.Card.initializeAllCards();</script></div>
-</div>
-<div class="flow bslib-grid" data-layout="flow" style="display: grid; grid-template-columns: minmax(3em, 62fr) minmax(3em, 38fr);
-grid-auto-rows: minmax(0, 1fr);">
-<div class="card bslib-card html-fill-container" data-title="What the evidence shows" data-bslib-card-init="" data-require-bs-caller="card()">
-<div class="card-header"><div class="card-title"><span style="display: inline">
-What the evidence shows
-</span></div></div>
-<div class="card-body html-fill-item html-fill-container">
+<section id="management-reading" class="level3 management-note">
+<h3 class="anchored" data-anchor-id="management-reading">Management reading</h3>
+<p>The latest increase in acute activity warrants monitoring because it differs from the five-year pattern. The evidence does not establish why the change occurred.</p>
+<p><strong>Immediate review priorities</strong></p>
 <ul>
-<li><strong>Community-contact rates increased across all three PHNs.</strong> Five-year growth ranged from 20.2% in Gippsland to 36.1% in Murray.</li>
-<li><strong>Acute-care rates were comparatively stable over five years.</strong> ED presentation rates were lower in 2023–24 than in 2018–19 in every PHN; hospitalisation rates increased by between 1.5% and 8.1%.</li>
-<li><strong>The latest year differed from the longer trend.</strong> ED and hospitalisation rates grew faster than community contacts in every PHN between 2022–23 and 2023–24.</li>
-<li><strong>Regional profiles differ.</strong> Murray recorded the highest latest community-contact and ED rates, while Gippsland recorded the highest hospitalisation rate.</li>
-<li><strong>The community-contact range widened.</strong> The gap between the highest and lowest PHN rates increased from 309 to 933 contacts per 10,000.</li>
+<li>confirm whether the increase continues in newer data;</li>
+<li>review Western Victoria’s ED change;</li>
+<li>review Gippsland’s hospitalisation profile; and</li>
+<li>check for changes in coding, coverage or service configuration.</li>
 </ul>
+</section>
 </div>
-<script data-bslib-card-init="">bslib.Card.initializeAllCards();</script></div><div class="card bslib-card html-fill-container" data-title="Why this warrants monitoring" data-bslib-card-init="" data-require-bs-caller="card()">
-<div class="card-header"><div class="card-title"><span style="display: inline">
-Why this warrants monitoring
-</span></div></div>
-<div class="card-body html-fill-item html-fill-container">
-<p>The latest increase in acute activity warrants monitoring because it differs from the broader five-year pattern.</p>
-<p>Priority questions are whether demand, clinical acuity, access, capacity, referral pathways, workforce, coding or collection coverage changed in 2023–24.</p>
-<p>Operational data should be reviewed before deciding whether a service response is required.</p>
+</section>
+<section id="trends" class="level2">
+<h2 class="anchored" data-anchor-id="trends">Long-term trend</h2>
+<div class="figure-question">
+Management question 1
 </div>
-<script data-bslib-card-init="">bslib.Card.initializeAllCards();</script></div>
-</div>
-<div class="flow bslib-grid" data-layout="flow" style="display: grid; grid-template-columns: minmax(3em, 55fr) minmax(3em, 45fr);
-grid-auto-rows: minmax(0, 1fr);">
-<div class="card bslib-card html-fill-container" data-title="How has the service mix changed?" data-bslib-card-init="" data-require-bs-caller="card()">
-<div class="card-header"><div class="card-title"><span style="display: inline">
-How has the service mix changed?
-</span></div></div>
-<div class="card-body html-fill-item html-fill-container">
-<div class="quarto-figure quarto-figure-center html-fill-item html-fill-container">
+<section id="how-has-the-service-mix-changed" class="level3">
+<h3 class="anchored" data-anchor-id="how-has-the-service-mix-changed">How has the service mix changed?</h3>
+<div class="figure-panel">
+<div class="figure-visual">
+<div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="figures/01_indexed_trends.png" class="img-fluid figure-img" alt="Three small-multiple line charts indexed to 2018–19. Community-contact rates rise in Gippsland, Murray and Western Victoria, while emergency department and hospitalisation rates remain comparatively stable over five years."></p>
 <figcaption>Indexed rates by PHN show stronger growth in community contacts than in acute-care indicators.</figcaption>
 </figure>
 </div>
-<p class="takeaway">
-<strong>Management takeaway:</strong> Community activity increased more than ED presentations or hospitalisations over the full period in every PHN.
-</p>
 </div>
-<script data-bslib-card-init="">bslib.Card.initializeAllCards();</script></div><div class="card bslib-card html-fill-container" data-title="Which indicators changed most?" data-bslib-card-init="" data-require-bs-caller="card()">
-<div class="card-header"><div class="card-title"><span style="display: inline">
-Which indicators changed most?
-</span></div></div>
-<div class="card-body html-fill-item html-fill-container">
-<div class="quarto-figure quarto-figure-center html-fill-item html-fill-container">
+<section id="reading-the-chart" class="level3 figure-reading">
+<h3 class="anchored" data-anchor-id="reading-the-chart">Reading the chart</h3>
+<p>Community-contact rates increased more than ED presentations or hospitalisations over the full period in every PHN.</p>
+<p>Indexing allows the direction and scale of change to be compared across indicators. It does not compare activity volumes.</p>
+<p class="interpretation">
+<strong>Operational use:</strong> Track whether growth in community activity is sustained and whether acute-care trends remain stable in newer reporting periods.
+</p>
+</section>
+</div>
+<div class="figure-question">
+Management question 2
+</div>
+</section>
+<section id="which-indicators-changed-most-over-five-years" class="level3">
+<h3 class="anchored" data-anchor-id="which-indicators-changed-most-over-five-years">Which indicators changed most over five years?</h3>
+<div class="figure-panel">
+<div class="figure-visual">
+<div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="figures/03_percentage_change.png" class="img-fluid figure-img" alt="Horizontal bars compare five-year percentage changes. Community contacts record the largest increases. Emergency department presentations decline across all three PHNs, while hospitalisations increase modestly."></p>
 <figcaption>Five-year percentage change by indicator and PHN.</figcaption>
 </figure>
 </div>
-<p class="takeaway">
-<strong>Management takeaway:</strong> Murray recorded the largest community-contact increase; Gippsland recorded the largest ED decrease; Western Victoria recorded the largest hospitalisation increase.
+</div>
+<section id="reading-the-chart-1" class="level3 figure-reading">
+<h3 class="anchored" data-anchor-id="reading-the-chart-1">Reading the chart</h3>
+<ul>
+<li>Murray recorded the largest community-contact increase: <strong>36.1%</strong>.</li>
+<li>Gippsland recorded the largest ED change: a <strong>10.4% decrease</strong>.</li>
+<li>Western Victoria recorded the largest hospitalisation increase: <strong>8.1%</strong>.</li>
+</ul>
+<p class="interpretation">
+<strong>Interpretation:</strong> Percentage change should be read alongside the underlying rate, particularly for the smaller acute-care indicators.
 </p>
+</section>
 </div>
-<script data-bslib-card-init="">bslib.Card.initializeAllCards();</script></div>
+</section>
+</section>
+<section id="profile" class="level2">
+<h2 class="anchored" data-anchor-id="profile">Latest regional profile</h2>
+<div class="figure-question">
+Management question 3
 </div>
-<div class="flow bslib-grid" data-layout="flow" style="display: grid; grid-template-columns: minmax(3em, 58fr) minmax(3em, 42fr);
-grid-auto-rows: minmax(0, 1fr);">
-<div class="card bslib-card html-fill-container" data-title="Which PHNs recorded the highest latest rates?" data-bslib-card-init="" data-require-bs-caller="card()">
-<div class="card-header"><div class="card-title"><span style="display: inline">
-Which PHNs recorded the highest latest rates?
-</span></div></div>
-<div class="card-body html-fill-item html-fill-container">
-<div class="quarto-figure quarto-figure-center html-fill-item html-fill-container">
+<section id="which-phns-recorded-the-highest-latest-rates" class="level3">
+<h3 class="anchored" data-anchor-id="which-phns-recorded-the-highest-latest-rates">Which PHNs recorded the highest latest rates?</h3>
+<div class="figure-panel">
+<div class="figure-visual">
+<div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="figures/02_latest_rates.png" class="img-fluid figure-img" alt="Three ranked horizontal bar charts show 2023–24 rates. Murray has the highest community-contact and ED rates. Gippsland has the highest hospitalisation rate."></p>
 <figcaption>Ranked 2023–24 utilisation rates for each service indicator.</figcaption>
 </figure>
 </div>
-<p class="takeaway">
-<strong>Management takeaway:</strong> A higher rate does not by itself indicate better or poorer performance. Interpret the level alongside population need, access, service models and data coverage.
-</p>
 </div>
-<script data-bslib-card-init="">bslib.Card.initializeAllCards();</script></div><div class="card bslib-card html-fill-container" data-title="2023–24 published rates" data-bslib-card-init="" data-require-bs-caller="card()">
-<div class="card-header"><div class="card-title"><span style="display: inline">
-2023–24 published rates
-</span></div></div>
-<div class="cell card-body html-fill-item html-fill-container">
-<div class="cell-output-display html-fill-item html-fill-container">
+<section id="reading-the-chart-2" class="level3 figure-reading">
+<h3 class="anchored" data-anchor-id="reading-the-chart-2">Reading the chart</h3>
+<p>Murray recorded the highest community-contact rate (<strong>5,086</strong>) and ED presentation rate (<strong>120</strong>) per 10,000. Gippsland recorded the highest hospitalisation rate (<strong>150</strong>).</p>
+<p class="interpretation">
+<strong>Interpretation:</strong> A higher rate does not by itself indicate better or poorer performance. Consider population need, access, capacity, service models and data coverage.
+</p>
+</section>
+</div>
+</section>
+<section id="published-202324-rates" class="level3 data-detail">
+<h3 class="anchored" data-anchor-id="published-202324-rates">Published 2023–24 rates</h3>
+<div class="cell">
+<div class="cell-output-display">
 <table class="caption-top table table-sm table-striped small">
 <thead>
 <tr class="header">
@@ -286,83 +257,86 @@ Which PHNs recorded the highest latest rates?
 <tbody>
 <tr class="odd">
 <td style="text-align: left;">Gippsland</td>
-<td style="text-align: left;">Community</td>
+<td style="text-align: left;">Community contacts</td>
 <td style="text-align: right;">4,153</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">Gippsland</td>
-<td style="text-align: left;">ED</td>
+<td style="text-align: left;">ED presentations</td>
 <td style="text-align: right;">112</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">Gippsland</td>
-<td style="text-align: left;">Hospital</td>
+<td style="text-align: left;">Hospitalisations</td>
 <td style="text-align: right;">150</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">Murray</td>
-<td style="text-align: left;">Community</td>
+<td style="text-align: left;">Community contacts</td>
 <td style="text-align: right;">5,086</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">Murray</td>
-<td style="text-align: left;">ED</td>
+<td style="text-align: left;">ED presentations</td>
 <td style="text-align: right;">120</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">Murray</td>
-<td style="text-align: left;">Hospital</td>
+<td style="text-align: left;">Hospitalisations</td>
 <td style="text-align: right;">134</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">Western Victoria</td>
-<td style="text-align: left;">Community</td>
+<td style="text-align: left;">Community contacts</td>
 <td style="text-align: right;">4,459</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">Western Victoria</td>
-<td style="text-align: left;">ED</td>
+<td style="text-align: left;">ED presentations</td>
 <td style="text-align: right;">80</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">Western Victoria</td>
-<td style="text-align: left;">Hospital</td>
+<td style="text-align: left;">Hospitalisations</td>
 <td style="text-align: right;">134</td>
 </tr>
 </tbody>
 </table>
 </div>
 </div>
-<div class="card-body html-fill-item html-fill-container">
-<p class="source-note">
-Rates are crude, all-age rates per 10,000 population.
-</p>
+</section>
+</section>
+<section id="review" class="level2">
+<h2 class="anchored" data-anchor-id="review">Operational review</h2>
+<div class="figure-question">
+Management question 4
 </div>
-<script data-bslib-card-init="">bslib.Card.initializeAllCards();</script></div>
-</div>
-<div class="flow bslib-grid" data-layout="flow" style="display: grid; grid-template-columns: minmax(3em, 55fr) minmax(3em, 45fr);
-grid-auto-rows: minmax(0, 1fr);">
-<div class="card bslib-card html-fill-container" data-title="Where did acute activity grow faster than community contacts?" data-bslib-card-init="" data-require-bs-caller="card()">
-<div class="card-header"><div class="card-title"><span style="display: inline">
-Where did acute activity grow faster than community contacts?
-</span></div></div>
-<div class="card-body html-fill-item html-fill-container">
-<div class="quarto-figure quarto-figure-center html-fill-item html-fill-container">
+<section id="where-did-acute-activity-grow-faster-than-community-contacts" class="level3">
+<h3 class="anchored" data-anchor-id="where-did-acute-activity-grow-faster-than-community-contacts">Where did acute activity grow faster than community contacts?</h3>
+<div class="figure-panel">
+<div class="figure-visual">
+<div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="figures/04_recent_growth_gap.png" class="img-fluid figure-img" alt="Paired comparisons show emergency department and hospitalisation growth exceeded community-contact growth in all three PHNs between 2022–23 and 2023–24. The largest gap is emergency department growth in Western Victoria."></p>
 <figcaption>Latest-year acute growth compared with community-contact growth.</figcaption>
 </figure>
 </div>
-<p class="takeaway">
-<strong>Management takeaway:</strong> Western Victoria recorded the largest ED growth gap: 29.0% ED growth compared with 9.5% community-contact growth.
-</p>
 </div>
-<script data-bslib-card-init="">bslib.Card.initializeAllCards();</script></div><div class="card bslib-card html-fill-container" data-title="Observations for operational review" data-bslib-card-init="" data-require-bs-caller="card()">
-<div class="card-header"><div class="card-title"><span style="display: inline">
-Observations for operational review
-</span></div></div>
-<div class="cell card-body html-fill-item html-fill-container">
-<div class="cell-output-display html-fill-item html-fill-container">
+<section id="reading-the-chart-3" class="level3 figure-reading">
+<h3 class="anchored" data-anchor-id="reading-the-chart-3">Reading the chart</h3>
+<p>Both acute indicators grew faster than community contacts in every PHN in the latest year.</p>
+<p>Western Victoria recorded the largest ED growth gap: <strong>29.0% ED growth</strong> compared with <strong>9.5% community-contact growth</strong>.</p>
+<p class="interpretation">
+<strong>Interpretation:</strong> These differences identify questions for review. They are not performance thresholds and do not show that changes in community care caused acute activity.
+</p>
+</section>
+</div>
+</section>
+<div class="review-grid">
+<section id="latest-year-change" class="level3 review-table">
+<h3 class="anchored" data-anchor-id="latest-year-change">Latest-year change</h3>
+<div class="cell">
+<div class="cell-output-display">
 <table class="caption-top table table-sm table-striped small">
 <thead>
 <tr class="header">
@@ -370,7 +344,7 @@ Observations for operational review
 <th style="text-align: right;" data-quarto-table-cell-role="th">Community</th>
 <th style="text-align: right;" data-quarto-table-cell-role="th">ED</th>
 <th style="text-align: right;" data-quarto-table-cell-role="th">Hospital</th>
-<th style="text-align: right;" data-quarto-table-cell-role="th">ED gap</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">ED minus community</th>
 </tr>
 </thead>
 <tbody>
@@ -399,68 +373,66 @@ Observations for operational review
 </table>
 </div>
 </div>
-<div class="card-body html-fill-item html-fill-container">
-<p>These are review prompts, not performance thresholds. Check whether the pattern continues in newer monthly or quarterly data.</p>
+<div class="priority-note">
+<strong>Priority observation:</strong> Western Victoria’s ED rate remained the lowest of the three PHNs, but its latest annual increase was the largest. Review both the level and the change.
 </div>
-<script data-bslib-card-init="">bslib.Card.initializeAllCards();</script></div>
-</div>
-<div class="flow bslib-grid" data-layout="flow" style="display: grid; grid-template-columns: minmax(3em, 55fr) minmax(3em, 45fr);
-grid-auto-rows: minmax(0, 1fr);">
-<div class="card bslib-card html-fill-container" data-title="Suggested operational questions" data-bslib-card-init="" data-require-bs-caller="card()">
-<div class="card-header"><div class="card-title"><span style="display: inline">
-Suggested operational questions
-</span></div></div>
-<div class="card-body html-fill-item html-fill-container">
-<ul>
+</section>
+<section id="questions-for-operational-review" class="level3">
+<h3 class="anchored" data-anchor-id="questions-for-operational-review">Questions for operational review</h3>
+<ol type="1">
 <li>Did demand, case complexity or clinical acuity change in 2023–24?</li>
-<li>Were there changes in access, waiting times, service capacity, opening hours or referral pathways?</li>
-<li>Did hospital or community-service coding, coverage or reporting practices change?</li>
+<li>Were there changes in access, waiting times, capacity, opening hours or referral pathways?</li>
+<li>Did coding, collection coverage or reporting practices change?</li>
 <li>Are the trends concentrated in particular age groups, local areas, providers or diagnostic groups?</li>
 <li>Do patient-flow data show repeated ED use, readmissions or gaps following discharge?</li>
-</ul>
+</ol>
+</section>
 </div>
-<script data-bslib-card-init="">bslib.Card.initializeAllCards();</script></div><div class="card bslib-card html-fill-container" data-title="Limitations" data-bslib-card-init="" data-require-bs-caller="card()">
-<div class="card-header"><div class="card-title"><span style="display: inline">
-Limitations
-</span></div></div>
-<div class="card-body html-fill-item html-fill-container">
+</section>
+<section id="methods" class="level2">
+<h2 class="anchored" data-anchor-id="methods">Methods and limitations</h2>
+<div class="method-grid">
+<section id="method" class="level3">
+<h3 class="anchored" data-anchor-id="method">Method</h3>
+<p>The reproducible R workflow:</p>
+<ol type="1">
+<li>reads the original AIHW dashboard exports;</li>
+<li>selects published all-age PHN rates;</li>
+<li>validates the complete 3-region × 3-indicator × 6-year panel;</li>
+<li>calculates annual and five-year percentage changes;</li>
+<li>indexes series to 2018–19; and</li>
+<li>compares regional ranges and latest-year acute/community growth.</li>
+</ol>
+<p>No modelling or significance testing is used. The purpose is transparent descriptive analysis for performance reporting and operational review.</p>
+<div class="reproduce">
+<strong>Reproduce locally</strong><br><code>Rscript analysis.R</code><br><code>quarto render</code>
+</div>
+</section>
+<section id="data-quality-and-limitations" class="level3">
+<h3 class="anchored" data-anchor-id="data-quality-and-limitations">Data quality and limitations</h3>
 <ul>
 <li>Rates are crude rather than age-standardised.</li>
 <li>Community contacts are encounters, not unique patients.</li>
-<li>Indicators come from different collections and cannot be combined into a measure of demand.</li>
-<li>Utilisation reflects need, access, capacity, pathways, service models and reporting practice.</li>
+<li>Indicators come from different collections and cannot be combined into a single measure of demand.</li>
+<li>Utilisation reflects need, access, capacity, pathways, service models, coding and data coverage.</li>
 <li>COVID-19 and population change complicate comparison across the period.</li>
+<li>Percentage changes in smaller acute-care rates are sensitive to rounding.</li>
 <li>The analysis covers three regional PHNs and is not a statewide assessment.</li>
 </ul>
+</section>
 </div>
-<script data-bslib-card-init="">bslib.Card.initializeAllCards();</script></div>
+<div class="brief-footer">
+<p>
+<strong>Source:</strong> <a href="https://www.aihw.gov.au/mental-health/monitoring/regional-profiles">AIHW Regional profiles of mental health service activity</a>, dashboard exports retrieved 27 September 2026.
+</p>
+<p>
+<strong>Status:</strong> Independent portfolio case study using public data. This is not an official Victorian Government publication. Analysis and interpretation by Sagrika Chugh.
+</p>
 </div>
-<div class="flow bslib-grid" data-layout="flow" style="display: grid; grid-template-columns: minmax(3em, 60fr) minmax(3em, 40fr);
-grid-auto-rows: minmax(0, 1fr);">
-<div class="card bslib-card html-fill-container" data-title="Source and method" data-bslib-card-init="" data-require-bs-caller="card()">
-<div class="card-header"><div class="card-title"><span style="display: inline">
-Source and method
-</span></div></div>
-<div class="card-body html-fill-item html-fill-container">
-<p>Source: <a href="https://www.aihw.gov.au/mental-health/monitoring/regional-profiles">AIHW Regional profiles of mental health service activity</a>, dashboard exports retrieved 27 September 2026.</p>
-<p>The workflow validates the complete 3-region × 3-indicator × 6-year panel, calculates annual and five-year percentage changes, indexes series to 2018–19 and compares regional ranges. No modelling or significance testing is used.</p>
-</div>
-<script data-bslib-card-init="">bslib.Card.initializeAllCards();</script></div><div class="card bslib-card html-fill-container" data-title="Reproduce the analysis" data-bslib-card-init="" data-require-bs-caller="card()">
-<div class="card-header"><div class="card-title"><span style="display: inline">
-Reproduce the analysis
-</span></div></div>
-<div class="card-body html-fill-item html-fill-container">
-<div class="code-copy-outer-scaffold html-fill-item html-fill-container"><div class="sourceCode html-fill-item html-fill-container" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">Rscript</span> analysis.R</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="ex">quarto</span> render</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p><a href="https://github.com/sagrikachugh/mental-health-data-project">View the full source, validation checks and briefing tables on GitHub</a>.</p>
-</div>
-<script data-bslib-card-init="">bslib.Card.initializeAllCards();</script></div><div id="3ade8a4a-fb1d-4a6c-8409-ac45482d5fc9" class="hidden">
+</section>
 
-</div>
-</div>
-</div>
-
-
+</main>
+<!-- /main column -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";
@@ -548,6 +520,11 @@ Reproduce the analysis
           if (link.dataset.originalHref !== undefined) {
             link.href = link.dataset.originalHref;
           }
+            // target, if specified
+            link.setAttribute("target", "_blank");
+            if (link.getAttribute("rel") === null) {
+              link.setAttribute("rel", "noopener");
+            }
         }
       }
     function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
@@ -861,17 +838,10 @@ Reproduce the analysis
     }
   });
   </script>
-</div> <!-- /container fluid -->
-
-<script type="application/javascript">
-window.document.addEventListener("DOMContentLoaded", function (_event) {
-  if (window.bslib.Card) {
-    window.bslib.Card.initializeAllCards();
-  }
-}); 
-</script>
-  
+</div> <!-- /content -->
 
 
 
+
+<script src="index_files/libs/quarto-html/zenscroll-min.js"></script>
 </body></html>

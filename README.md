@@ -1,6 +1,6 @@
 # Victorian regional mental-health service utilisation
 
-[View the briefing dashboard](https://sagrikachugh.github.io/mental-health-data-project/)
+[View the analytical briefing](https://sagrikachugh.github.io/mental-health-data-project/)
 
 ## Purpose
 
@@ -8,13 +8,13 @@ This portfolio case study addresses the business question:
 
 > **How has mental-health service utilisation changed across regional Victorian PHNs, and which patterns warrant further operational review?**
 
-It provides a concise, descriptive briefing on community mental-health contacts, emergency department presentations and hospitalisations across Gippsland, Murray and Western Victoria. The dashboard contains the findings, figures, operational questions and interpretation.
+It provides a concise, descriptive briefing on community mental-health contacts, emergency department presentations and hospitalisations across Gippsland, Murray and Western Victoria. The briefing page contains the findings, figures, operational questions and interpretation.
 
 ## Repository contents
 
 - `analysis.R` — cleans and validates the source exports, calculates trends and percentage changes, and recreates all outputs.
-- `index.qmd` — Quarto source for the management-style dashboard.
-- `docs/` — rendered GitHub Pages dashboard.
+- `index.qmd` — Quarto source for the management-style analytical briefing.
+- `docs/` — rendered GitHub Pages briefing.
 - `data/raw/` — original AIHW dashboard exports.
 - `data/victorian_phn_rates.csv` — validated analysis dataset.
 - `figures/` — four publication-quality figures in PNG and PDF.
@@ -22,7 +22,7 @@ It provides a concise, descriptive briefing on community mental-health contacts,
 
 ## Technology
 
-The analytical workflow uses **R only**, with `dplyr`, `tidyr`, `readr`, `ggplot2` and `scales`. **Quarto** combines the R outputs with the briefing narrative, and **SCSS** controls the dashboard styling. Quarto generates the published HTML, CSS and JavaScript assets; no custom Python or JavaScript analysis code is used.
+The analytical workflow uses **R only**, with `dplyr`, `tidyr`, `readr`, `ggplot2` and `scales`. **Quarto** combines the R outputs with the briefing narrative, and **SCSS** controls the page styling. Quarto generates the published HTML, CSS and JavaScript assets; no custom Python or JavaScript analysis code is used.
 
 ## Reproduce
 
@@ -33,7 +33,7 @@ Rscript analysis.R
 quarto render
 ```
 
-A successful analysis run writes six passing checks to `results/validation_checks.csv`. `quarto render` rebuilds the dashboard in `docs/`.
+A successful analysis run writes six passing checks to `results/validation_checks.csv`. `quarto render` rebuilds the site in `docs/`.
 
 ## Data
 
@@ -43,4 +43,4 @@ The project uses published all-age crude rates per 10,000 population for three r
 
 ## Interpretation
 
-This is descriptive service-utilisation analysis. It does not assess causation, service quality, unmet need or outcomes. See the dashboard for the complete findings, operational implications and limitations.
+This is descriptive service-utilisation analysis. It does not assess causation, service quality, unmet need or outcomes. See the analytical briefing for the complete findings, operational implications and limitations.

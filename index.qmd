@@ -1,19 +1,15 @@
 ---
-title: "Victorian regional mental-health service utilisation"
-author: "Sagrika Chugh"
+pagetitle: "Victorian regional mental-health service utilisation"
 format:
-  dashboard:
-    theme: [cosmo, dashboard.scss]
-    orientation: rows
-    scrolling: true
-    expandable: false
-    nav-buttons:
-      - icon: github
-        href: https://github.com/sagrikachugh/mental-health-data-project
-        aria-label: View source code on GitHub
-      - icon: house
-        href: https://sagrikachugh.github.io/
-        aria-label: View portfolio
+  html:
+    theme: [cosmo, briefing.scss]
+    page-layout: full
+    toc: false
+    smooth-scroll: true
+    anchor-sections: true
+    link-external-newwindow: true
+    code-copy: true
+title-block-style: none
 execute:
   echo: false
   warning: false
@@ -40,117 +36,195 @@ community_range <- ranges |>
   pull(regional_range_2023)
 ```
 
-<div class="briefing-question">
-<strong>Business question:</strong> How has mental-health service utilisation changed across regional Victorian PHNs, and which patterns warrant further operational review?
-</div>
+<nav class="brief-nav" aria-label="Briefing navigation">
+  <span>Health service analytics · Portfolio case study</span>
+  <span class="brief-nav-links">
+    <a href="#summary">Summary</a>
+    <a href="#trends">Trends</a>
+    <a href="#profile">Regional profile</a>
+    <a href="#review">Operational review</a>
+    <a href="#methods">Methods</a>
+    <a href="https://github.com/sagrikachugh/mental-health-data-project">Source code</a>
+  </span>
+</nav>
 
-This dashboard summarises published all-age rates for Gippsland, Murray and Western Victoria from 2018–19 to 2023–24. It is designed for descriptive performance reporting and monitoring.
+::: {.brief-header}
+::: {}
+<p class="brief-eyebrow">Independent analytical briefing</p>
 
-<div class="interpretation-boundary">
-<strong>Interpretation boundary:</strong> Activity rates describe service utilisation. They do not measure quality, unmet need or outcomes, and they cannot establish that changes in one care setting caused changes in another.
-</div>
+# Victorian regional mental-health service utilisation
 
-## Headline indicators {.flow}
+<p class="brief-deck">A descriptive assessment of community and acute mental-health service activity across Gippsland, Murray and Western Victoria.</p>
 
-```{r}
-#| content: valuebox
-#| title: "Largest five-year community growth"
-#| icon: graph-up-arrow
-#| color: "#005a70"
-list(value = sprintf("+%.1f%%", largest_community$five_year_change_pct))
-```
-
-```{r}
-#| content: valuebox
-#| title: "Murray community contacts"
-#| icon: people
-#| color: "#2c6e63"
-list(value = sprintf("%s per 10,000", format(largest_community$latest_rate, big.mark = ",")))
-```
-
-```{r}
-#| content: valuebox
-#| title: "Largest latest-year ED increase"
-#| icon: hospital
-#| color: "#a85d00"
-list(value = sprintf("%.1f%%", largest_latest_ed$ed_change_pct))
-```
-
-```{r}
-#| content: valuebox
-#| title: "2023–24 community regional range"
-#| icon: arrows-expand
-#| color: "#52656f"
-list(value = sprintf("%s per 10,000", format(community_range, big.mark = ",")))
-```
-
-## Executive summary {.flow}
-
-::: {.card title="What the evidence shows" width="62%"}
-- **Community-contact rates increased across all three PHNs.** Five-year growth ranged from 20.2% in Gippsland to 36.1% in Murray.
-- **Acute-care rates were comparatively stable over five years.** ED presentation rates were lower in 2023–24 than in 2018–19 in every PHN; hospitalisation rates increased by between 1.5% and 8.1%.
-- **The latest year differed from the longer trend.** ED and hospitalisation rates grew faster than community contacts in every PHN between 2022–23 and 2023–24.
-- **Regional profiles differ.** Murray recorded the highest latest community-contact and ED rates, while Gippsland recorded the highest hospitalisation rate.
-- **The community-contact range widened.** The gap between the highest and lowest PHN rates increased from 309 to 933 contacts per 10,000.
+<div class="business-question"><strong>Business question</strong><br>How has mental-health service utilisation changed across regional Victorian PHNs, and which patterns warrant further operational review?</div>
 :::
 
-::: {.card title="Why this warrants monitoring" width="38%"}
-The latest increase in acute activity warrants monitoring because it differs from the broader five-year pattern.
-
-Priority questions are whether demand, clinical acuity, access, capacity, referral pathways, workforce, coding or collection coverage changed in 2023–24.
-
-Operational data should be reviewed before deciding whether a service response is required.
+::: {.brief-meta}
+<dl>
+  <div><dt>Reporting period</dt><dd>2018–19 to 2023–24</dd></div>
+  <div><dt>Geography</dt><dd>Three regional Victorian PHNs</dd></div>
+  <div><dt>Measures</dt><dd>All-age crude rates per 10,000</dd></div>
+  <div><dt>Source</dt><dd>Australian Institute of Health and Welfare</dd></div>
+  <div><dt>Prepared by</dt><dd>Sagrika Chugh</dd></div>
+</dl>
+:::
 :::
 
-## Five-year service trends {.flow}
+::: {.metric-strip aria-label="Headline indicators"}
+::: {.metric}
+<span class="metric-value">`r sprintf("+%.1f%%", largest_community$five_year_change_pct)`</span>
+<span class="metric-label">Largest five-year community growth</span>
+<span class="metric-context">Murray, 2018–19 to 2023–24</span>
+:::
+::: {.metric}
+<span class="metric-value">`r format(largest_community$latest_rate, big.mark = ",")`</span>
+<span class="metric-label">Community contacts per 10,000</span>
+<span class="metric-context">Murray, 2023–24</span>
+:::
+::: {.metric}
+<span class="metric-value">`r sprintf("%.1f%%", largest_latest_ed$ed_change_pct)`</span>
+<span class="metric-label">Largest latest-year ED increase</span>
+<span class="metric-context">Western Victoria, 2022–23 to 2023–24</span>
+:::
+::: {.metric}
+<span class="metric-value">`r format(community_range, big.mark = ",")`</span>
+<span class="metric-label">Community-contact regional range</span>
+<span class="metric-context">Rate difference, 2023–24</span>
+:::
+:::
 
-::: {.card title="How has the service mix changed?" width="55%"}
+## Executive brief {#summary}
+
+::: {.executive-grid}
+::: {}
+<ol class="key-findings">
+  <li><strong>Community-contact rates increased across all three PHNs.</strong> Five-year growth ranged from 20.2% in Gippsland to 36.1% in Murray.</li>
+  <li><strong>Acute-care rates were comparatively stable over five years.</strong> ED presentation rates were lower in 2023–24 than in 2018–19 in every PHN; hospitalisation rates increased by between 1.5% and 8.1%.</li>
+  <li><strong>The latest year differed from the longer pattern.</strong> ED and hospitalisation rates grew faster than community contacts in every PHN between 2022–23 and 2023–24.</li>
+  <li><strong>Regional profiles differ.</strong> Murray recorded the highest latest community-contact and ED rates; Gippsland recorded the highest hospitalisation rate.</li>
+</ol>
+:::
+
+::: {.management-note}
+### Management reading
+
+The latest increase in acute activity warrants monitoring because it differs from the five-year pattern. The evidence does not establish why the change occurred.
+
+**Immediate review priorities**
+
+- confirm whether the increase continues in newer data;
+- review Western Victoria's ED change;
+- review Gippsland's hospitalisation profile; and
+- check for changes in coding, coverage or service configuration.
+:::
+:::
+
+## Long-term trend {#trends}
+
+<div class="figure-question">Management question 1</div>
+
+### How has the service mix changed?
+
+::: {.figure-panel}
+::: {.figure-visual}
 ![Indexed rates by PHN show stronger growth in community contacts than in acute-care indicators.](figures/01_indexed_trends.png){fig-alt="Three small-multiple line charts indexed to 2018–19. Community-contact rates rise in Gippsland, Murray and Western Victoria, while emergency department and hospitalisation rates remain comparatively stable over five years."}
-
-<p class="takeaway"><strong>Management takeaway:</strong> Community activity increased more than ED presentations or hospitalisations over the full period in every PHN.</p>
 :::
 
-::: {.card title="Which indicators changed most?" width="45%"}
+::: {.figure-reading}
+### Reading the chart
+
+Community-contact rates increased more than ED presentations or hospitalisations over the full period in every PHN.
+
+Indexing allows the direction and scale of change to be compared across indicators. It does not compare activity volumes.
+
+<p class="interpretation"><strong>Operational use:</strong> Track whether growth in community activity is sustained and whether acute-care trends remain stable in newer reporting periods.</p>
+:::
+:::
+
+<div class="figure-question">Management question 2</div>
+
+### Which indicators changed most over five years?
+
+::: {.figure-panel}
+::: {.figure-visual}
 ![Five-year percentage change by indicator and PHN.](figures/03_percentage_change.png){fig-alt="Horizontal bars compare five-year percentage changes. Community contacts record the largest increases. Emergency department presentations decline across all three PHNs, while hospitalisations increase modestly."}
-
-<p class="takeaway"><strong>Management takeaway:</strong> Murray recorded the largest community-contact increase; Gippsland recorded the largest ED decrease; Western Victoria recorded the largest hospitalisation increase.</p>
 :::
 
-## Latest regional profile {.flow}
+::: {.figure-reading}
+### Reading the chart
 
-::: {.card title="Which PHNs recorded the highest latest rates?" width="58%"}
+- Murray recorded the largest community-contact increase: **36.1%**.
+- Gippsland recorded the largest ED change: a **10.4% decrease**.
+- Western Victoria recorded the largest hospitalisation increase: **8.1%**.
+
+<p class="interpretation"><strong>Interpretation:</strong> Percentage change should be read alongside the underlying rate, particularly for the smaller acute-care indicators.</p>
+:::
+:::
+
+## Latest regional profile {#profile}
+
+<div class="figure-question">Management question 3</div>
+
+### Which PHNs recorded the highest latest rates?
+
+::: {.figure-panel}
+::: {.figure-visual}
 ![Ranked 2023–24 utilisation rates for each service indicator.](figures/02_latest_rates.png){fig-alt="Three ranked horizontal bar charts show 2023–24 rates. Murray has the highest community-contact and ED rates. Gippsland has the highest hospitalisation rate."}
-
-<p class="takeaway"><strong>Management takeaway:</strong> A higher rate does not by itself indicate better or poorer performance. Interpret the level alongside population need, access, service models and data coverage.</p>
 :::
 
-::: {.card title="2023–24 published rates" width="42%"}
+::: {.figure-reading}
+### Reading the chart
+
+Murray recorded the highest community-contact rate (**5,086**) and ED presentation rate (**120**) per 10,000. Gippsland recorded the highest hospitalisation rate (**150**).
+
+<p class="interpretation"><strong>Interpretation:</strong> A higher rate does not by itself indicate better or poorer performance. Consider population need, access, capacity, service models and data coverage.</p>
+:::
+:::
+
+::: {.data-detail}
+### Published 2023–24 rates
+
 ```{r}
 latest |>
   mutate(
     service = recode(
       service,
-      "Community contacts" = "Community",
-      "ED presentations" = "ED",
-      "Hospitalisations" = "Hospital"
+      "Community contacts" = "Community contacts",
+      "ED presentations" = "ED presentations",
+      "Hospitalisations" = "Hospitalisations"
     )
   ) |>
   select(PHN = region, Indicator = service, `Rate per 10,000` = rate_per_10000) |>
   knitr::kable(format = "html", format.args = list(big.mark = ","))
 ```
-
-<p class="source-note">Rates are crude, all-age rates per 10,000 population.</p>
 :::
 
-## Latest-year operational review {.flow}
+## Operational review {#review}
 
-::: {.card title="Where did acute activity grow faster than community contacts?" width="55%"}
+<div class="figure-question">Management question 4</div>
+
+### Where did acute activity grow faster than community contacts?
+
+::: {.figure-panel}
+::: {.figure-visual}
 ![Latest-year acute growth compared with community-contact growth.](figures/04_recent_growth_gap.png){fig-alt="Paired comparisons show emergency department and hospitalisation growth exceeded community-contact growth in all three PHNs between 2022–23 and 2023–24. The largest gap is emergency department growth in Western Victoria."}
-
-<p class="takeaway"><strong>Management takeaway:</strong> Western Victoria recorded the largest ED growth gap: 29.0% ED growth compared with 9.5% community-contact growth.</p>
 :::
 
-::: {.card title="Observations for operational review" width="45%"}
+::: {.figure-reading}
+### Reading the chart
+
+Both acute indicators grew faster than community contacts in every PHN in the latest year.
+
+Western Victoria recorded the largest ED growth gap: **29.0% ED growth** compared with **9.5% community-contact growth**.
+
+<p class="interpretation"><strong>Interpretation:</strong> These differences identify questions for review. They are not performance thresholds and do not show that changes in community care caused acute activity.</p>
+:::
+:::
+
+::: {.review-grid}
+::: {.review-table}
+### Latest-year change
+
 ```{r}
 review |>
   transmute(
@@ -158,46 +232,59 @@ review |>
     Community = sprintf("%.1f%%", community_change_pct),
     ED = sprintf("%.1f%%", ed_change_pct),
     Hospital = sprintf("%.1f%%", hospitalisation_change_pct),
-    `ED gap` = sprintf("%+.1f pp", ed_minus_community_pp)
+    `ED minus community` = sprintf("%+.1f pp", ed_minus_community_pp)
   ) |>
   knitr::kable(format = "html", align = c("l", "r", "r", "r", "r"))
 ```
 
-These are review prompts, not performance thresholds. Check whether the pattern continues in newer monthly or quarterly data.
+<div class="priority-note"><strong>Priority observation:</strong> Western Victoria's ED rate remained the lowest of the three PHNs, but its latest annual increase was the largest. Review both the level and the change.</div>
 :::
 
-## Decision support {.flow}
+::: {}
+### Questions for operational review
 
-::: {.card title="Suggested operational questions" width="55%"}
-- Did demand, case complexity or clinical acuity change in 2023–24?
-- Were there changes in access, waiting times, service capacity, opening hours or referral pathways?
-- Did hospital or community-service coding, coverage or reporting practices change?
-- Are the trends concentrated in particular age groups, local areas, providers or diagnostic groups?
-- Do patient-flow data show repeated ED use, readmissions or gaps following discharge?
+1. Did demand, case complexity or clinical acuity change in 2023–24?
+2. Were there changes in access, waiting times, capacity, opening hours or referral pathways?
+3. Did coding, collection coverage or reporting practices change?
+4. Are the trends concentrated in particular age groups, local areas, providers or diagnostic groups?
+5. Do patient-flow data show repeated ED use, readmissions or gaps following discharge?
+:::
 :::
 
-::: {.card title="Limitations" width="45%"}
+## Methods and limitations {#methods}
+
+::: {.method-grid}
+::: {}
+### Method
+
+The reproducible R workflow:
+
+1. reads the original AIHW dashboard exports;
+2. selects published all-age PHN rates;
+3. validates the complete 3-region × 3-indicator × 6-year panel;
+4. calculates annual and five-year percentage changes;
+5. indexes series to 2018–19; and
+6. compares regional ranges and latest-year acute/community growth.
+
+No modelling or significance testing is used. The purpose is transparent descriptive analysis for performance reporting and operational review.
+
+<div class="reproduce"><strong>Reproduce locally</strong><br><code>Rscript analysis.R</code><br><code>quarto render</code></div>
+:::
+
+::: {}
+### Data quality and limitations
+
 - Rates are crude rather than age-standardised.
 - Community contacts are encounters, not unique patients.
-- Indicators come from different collections and cannot be combined into a measure of demand.
-- Utilisation reflects need, access, capacity, pathways, service models and reporting practice.
+- Indicators come from different collections and cannot be combined into a single measure of demand.
+- Utilisation reflects need, access, capacity, pathways, service models, coding and data coverage.
 - COVID-19 and population change complicate comparison across the period.
+- Percentage changes in smaller acute-care rates are sensitive to rounding.
 - The analysis covers three regional PHNs and is not a statewide assessment.
 :::
-
-## Data and reproducibility {.flow}
-
-::: {.card title="Source and method" width="60%"}
-Source: [AIHW Regional profiles of mental health service activity](https://www.aihw.gov.au/mental-health/monitoring/regional-profiles), dashboard exports retrieved 27 September 2026.
-
-The workflow validates the complete 3-region × 3-indicator × 6-year panel, calculates annual and five-year percentage changes, indexes series to 2018–19 and compares regional ranges. No modelling or significance testing is used.
 :::
 
-::: {.card title="Reproduce the analysis" width="40%"}
-```bash
-Rscript analysis.R
-quarto render
-```
-
-[View the full source, validation checks and briefing tables on GitHub](https://github.com/sagrikachugh/mental-health-data-project).
-:::
+<div class="brief-footer">
+<p><strong>Source:</strong> <a href="https://www.aihw.gov.au/mental-health/monitoring/regional-profiles">AIHW Regional profiles of mental health service activity</a>, dashboard exports retrieved 27 September 2026.</p>
+<p><strong>Status:</strong> Independent portfolio case study using public data. This is not an official Victorian Government publication. Analysis and interpretation by Sagrika Chugh.</p>
+</div>
