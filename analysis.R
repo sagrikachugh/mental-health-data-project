@@ -245,9 +245,9 @@ readr::write_csv(operational_review, "results/operational_review_prompts.csv")
 # Colour-blind-safe palette. Figure 1 also uses line type so colour is not the
 # only means of distinguishing the indicators.
 service_colours <- c(
-  "Community contacts" = "#0072B2",
-  "ED presentations" = "#D55E00",
-  "Hospitalisations" = "#7B3294"
+  "Community contacts" = "#2F6F68",
+  "ED presentations" = "#C05A3D",
+  "Hospitalisations" = "#7A5E78"
 )
 service_line_types <- c(
   "Community contacts" = "solid",
@@ -265,29 +265,31 @@ briefing_theme <- function() {
       panel.grid.minor = element_blank(),
       panel.grid.major.y = element_blank(),
       plot.title = element_text(
-        face = "bold", size = 18, colour = "#17324D", margin = margin(b = 6)
+        face = "bold", size = 18, colour = "#29433D", margin = margin(b = 6)
       ),
       plot.subtitle = element_text(
-        size = 11.5, colour = "#334E68", margin = margin(b = 14)
+        size = 11.5, colour = "#4F5A55", margin = margin(b = 14)
       ),
       plot.caption = element_text(
-        hjust = 0, size = 8.5, colour = "#52616B", margin = margin(t = 12)
+        hjust = 0, size = 8.5, colour = "#6A665F", margin = margin(t = 12)
       ),
-      strip.text = element_text(face = "bold", size = 11.5, colour = "#17324D"),
-      axis.title = element_text(colour = "#243B53"),
-      axis.text = element_text(colour = "#486581"),
+      strip.text = element_text(face = "bold", size = 11.5, colour = "#29433D"),
+      axis.title = element_text(colour = "#29433D"),
+      axis.text = element_text(colour = "#5F6761"),
       legend.position = "bottom",
       legend.title = element_blank(),
       legend.text = element_text(size = 10.5),
+      plot.background = element_rect(fill = "#FBF8F2", colour = NA),
+      panel.background = element_rect(fill = "#FBF8F2", colour = NA),
       plot.margin = margin(18, 22, 16, 18),
       panel.spacing = unit(18, "pt")
     )
 }
 save_figure <- function(filename, plot, width, height) {
   ggsave(file.path("figures", paste0(filename, ".png")), plot,
-         width = width, height = height, dpi = 300, bg = "white")
+         width = width, height = height, dpi = 300, bg = "#FBF8F2")
   ggsave(file.path("figures", paste0(filename, ".pdf")), plot,
-         width = width, height = height, device = "pdf", bg = "white")
+         width = width, height = height, device = "pdf", bg = "#FBF8F2")
 }
 plot_data <- service_data |>
   mutate(
@@ -300,7 +302,7 @@ figure_1 <- ggplot(
   plot_data,
   aes(year, index_2018_19, colour = service, linetype = service, group = service)
 ) +
-  geom_hline(yintercept = 100, colour = "#9FB3C8", linetype = "dotted") +
+  geom_hline(yintercept = 100, colour = "#B7AA99", linetype = "dotted") +
   geom_line(linewidth = 1) +
   geom_point(size = 2) +
   facet_wrap(~region, ncol = 3) +
@@ -331,7 +333,7 @@ figure_2 <- ggplot(
   geom_col(width = 0.58, show.legend = FALSE) +
   geom_text(
     aes(label = scales::comma(rate_per_10000, accuracy = 1)),
-    hjust = -0.18, size = 3.8, colour = "#17324D"
+    hjust = -0.18, size = 3.8, colour = "#29433D"
   ) +
   facet_wrap(~service, scales = "free", nrow = 1) +
   scale_fill_manual(values = service_colours) +
@@ -346,7 +348,7 @@ figure_2 <- ggplot(
     caption = paste(source_note, "Higher rates may reflect need, access, capacity or coding.")
   ) +
   briefing_theme() +
-  theme(panel.grid.major.x = element_line(colour = "#E6ECF0"))
+  theme(panel.grid.major.x = element_line(colour = "#E4DCD0"))
 save_figure("02_latest_rates", figure_2, 12, 6)
 
 # Figure 3: Which region and indicator changed most?
@@ -357,10 +359,10 @@ heatmap_data <- five_year_change |>
     change_label = sprintf("%+.1f%%", five_year_change_pct)
   )
 figure_3 <- ggplot(heatmap_data, aes(service, region, fill = five_year_change_pct)) +
-  geom_tile(colour = "white", linewidth = 2) +
-  geom_text(aes(label = change_label), size = 4.5, colour = "#102A43") +
+  geom_tile(colour = "#FBF8F2", linewidth = 2) +
+  geom_text(aes(label = change_label), size = 4.5, colour = "#233A36") +
   scale_fill_gradient2(
-    low = "#E69F00", mid = "#F4F6F8", high = "#56B4E9",
+    low = "#D69A59", mid = "#F4EFE7", high = "#76AAA1",
     midpoint = 0, limits = c(-40, 40), guide = "none"
   ) +
   labs(
@@ -387,12 +389,12 @@ gap_plot_data <- growth_comparison |>
     region = factor(region, levels = rev(region_order))
   )
 figure_4 <- ggplot(gap_plot_data, aes(growth_gap_pp, region, fill = service)) +
-  geom_vline(xintercept = 0, colour = "#829AB1", linewidth = 0.6) +
+  geom_vline(xintercept = 0, colour = "#B7AA99", linewidth = 0.6) +
   geom_col(position = position_dodge(width = 0.72), width = 0.62) +
   geom_text(
     aes(label = sprintf("%+.1f pp", growth_gap_pp)),
     position = position_dodge(width = 0.72),
-    hjust = -0.15, size = 3.7, colour = "#17324D"
+    hjust = -0.15, size = 3.7, colour = "#29433D"
   ) +
   scale_fill_manual(values = service_colours[c("ED presentations", "Hospitalisations")]) +
   scale_x_continuous(
@@ -408,7 +410,7 @@ figure_4 <- ggplot(gap_plot_data, aes(growth_gap_pp, region, fill = service)) +
     )
   ) +
   briefing_theme() +
-  theme(panel.grid.major.x = element_line(colour = "#E6ECF0"))
+  theme(panel.grid.major.x = element_line(colour = "#E4DCD0"))
 save_figure("04_recent_growth_gap", figure_4, 11, 6)
 
 # 6. Reproducibility record ------------------------------------------------

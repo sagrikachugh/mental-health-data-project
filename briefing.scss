@@ -1,24 +1,24 @@
 /*-- scss:defaults --*/
-$primary: #005f6b;
-$body-bg: #ffffff;
-$body-color: #202c33;
-$link-color: #005f6b;
+$primary: #7b3f2d;
+$body-bg: #fbf8f2;
+$body-color: #2e332f;
+$link-color: #7b3f2d;
 $font-family-sans-serif: "Aptos", "Segoe UI", Arial, sans-serif;
 $headings-font-weight: 650;
 $border-radius: 0;
 
 /*-- scss:rules --*/
 :root {
-  --ink: #202c33;
-  --muted: #596970;
-  --navy: #17324d;
-  --teal: #006b73;
-  --teal-soft: #e9f2f2;
-  --amber: #a55b00;
-  --amber-soft: #fff6e8;
-  --line: #d7dfe2;
-  --line-strong: #aab8bd;
-  --surface: #f5f7f7;
+  --ink: #2e332f;
+  --muted: #68645e;
+  --navy: #29433d;
+  --teal: #a24b32;
+  --teal-soft: #f3e7dc;
+  --amber: #9b6a2f;
+  --amber-soft: #f7eedc;
+  --line: #ded6c9;
+  --line-strong: #bbae9c;
+  --surface: #f2ede4;
 }
 
 html { scroll-behavior: smooth; }
@@ -89,7 +89,7 @@ main.content {
 .brief-deck {
   max-width: 790px;
   margin: 1.35rem 0 0;
-  color: #3f5058;
+  color: #4f5752;
   font-size: 1.16rem;
   line-height: 1.62;
 }
@@ -117,7 +117,7 @@ main.content {
   padding: 1rem 1.2rem;
   background: var(--teal-soft);
   border-left: 5px solid var(--teal);
-  color: #17383c;
+  color: #3c403b;
   font-size: 1rem;
 }
 
@@ -240,7 +240,7 @@ section.level2 > h2 {
 .figure-visual img {
   width: 100%;
   height: auto;
-  background: #fff;
+  background: #fbf8f2;
 }
 .figure-visual figure { margin: 0; }
 .figure-visual figcaption {
@@ -259,7 +259,7 @@ section.level2 > h2 {
   font-size: 1rem;
 }
 .figure-reading p,
-.figure-reading li { color: #3f5058; font-size: 0.9rem; }
+.figure-reading li { color: #4f5752; font-size: 0.9rem; }
 .figure-reading ul { padding-left: 1.1rem; }
 .figure-reading .interpretation {
   margin-top: 1rem;
@@ -284,7 +284,7 @@ section.level2 > h2 {
 .data-detail table { margin: 0 0 1rem; font-size: 0.86rem; }
 table { width: 100%; }
 thead th {
-  background: #edf2f3;
+  background: #eee8de;
   color: var(--navy);
   border-bottom: 2px solid var(--line-strong) !important;
 }
@@ -303,7 +303,7 @@ td, th { padding: 0.55rem 0.65rem !important; }
   padding: 0.85rem 1rem;
   background: var(--amber-soft);
   border-left: 4px solid var(--amber);
-  color: #53360f;
+  color: #5b4124;
   font-size: 0.86rem;
 }
 
@@ -316,7 +316,7 @@ td, th { padding: 0.55rem 0.65rem !important; }
 .reproduce {
   margin-top: 1.25rem;
   padding: 1rem 1.1rem;
-  background: #f2f4f5;
+  background: #f1ece3;
   border: 1px solid var(--line);
 }
 
