@@ -29,7 +29,7 @@ metrics <- briefing$metrics
     <a href="#summary">Summary</a>
     <a href="#trends">Trends</a>
     <a href="#profile">Regional profile</a>
-    <a href="#review">Operational review</a>
+    <a href="#review">Latest-year change</a>
     <a href="#methods">Methods</a>
     <a href="https://github.com/sagrikachugh/mental-health-data-project">Source code</a>
   </span>
@@ -41,9 +41,9 @@ metrics <- briefing$metrics
 
 # Victorian regional mental-health service utilisation
 
-<p class="brief-deck">A descriptive assessment of community and acute mental-health service activity across Gippsland, Murray and Western Victoria.</p>
+<p class="brief-deck">Community contacts, ED presentations and hospitalisations across Gippsland, Murray and Western Victoria.</p>
 
-<div class="business-question"><strong>Business question</strong><br>How has mental-health service utilisation changed across regional Victorian PHNs, and which patterns warrant further operational review?</div>
+<div class="business-question"><strong>Question</strong><br>How has mental-health service utilisation changed across regional Victorian PHNs, and which patterns warrant a closer look?</div>
 :::
 
 ::: {.brief-meta}
@@ -80,24 +80,24 @@ metrics <- briefing$metrics
 :::
 :::
 
-## Executive brief {#summary}
+## What the data shows {#summary}
 
 ::: {.executive-grid}
 ::: {}
 <ol class="key-findings">
-  <li><strong>Community-contact rates increased across all three PHNs.</strong> `r community_change_summary(briefing)`</li>
-  <li><strong>Acute-care rates were comparatively stable over five years.</strong> ED presentation rates were lower in 2023–24 than in 2018–19 in every PHN; hospitalisation rates increased by between `r fmt_pct(metrics$hospital_min_change)` and `r fmt_pct(metrics$hospital_max_change)`.</li>
-  <li><strong>The latest year differed from the longer pattern.</strong> ED and hospitalisation rates grew faster than community contacts in every PHN between 2022–23 and 2023–24.</li>
-  <li><strong>Regional profiles differ.</strong> `r latest_profile_summary(briefing)`</li>
+  <li><strong>Community-contact rates rose in all three PHNs.</strong> `r community_change_summary(briefing)`</li>
+  <li><strong>The five-year acute-care pattern was steadier.</strong> ED presentation rates were lower in 2023–24 than in 2018–19 in every PHN; hospitalisation rates increased by between `r fmt_pct(metrics$hospital_min_change)` and `r fmt_pct(metrics$hospital_max_change)`.</li>
+  <li><strong>But the final year broke from that longer pattern.</strong> ED and hospitalisation rates grew faster than community contacts in every PHN between 2022–23 and 2023–24.</li>
+  <li><strong>The regions do not look alike.</strong> `r latest_profile_summary(briefing)`</li>
 </ol>
 :::
 
 ::: {.management-note}
-### Management reading
+### What I would check next
 
-The latest increase in acute activity warrants monitoring because it differs from the five-year pattern. The evidence does not establish why the change occurred.
+The final-year rise in acute activity is worth checking because it runs against the longer pattern. It may reflect a real shift, a reporting change or a mixture of both; these data cannot tell us which.
 
-**Immediate review priorities**
+**First checks**
 
 - confirm whether the increase continues in newer data;
 - review Western Victoria's ED change;
@@ -108,7 +108,7 @@ The latest increase in acute activity warrants monitoring because it differs fro
 
 ## Long-term trend {#trends}
 
-<div class="figure-question">Management question 1</div>
+<div class="figure-question">Question 1</div>
 
 ### How has the service mix changed?
 
@@ -118,17 +118,17 @@ The latest increase in acute activity warrants monitoring because it differs fro
 :::
 
 ::: {.figure-reading}
-### Reading the chart
+### What stands out
 
 Community-contact rates increased more than ED presentations or hospitalisations over the full period in every PHN.
 
 Indexing allows the direction and scale of change to be compared across indicators. It does not compare activity volumes.
 
-<p class="interpretation"><strong>Operational use:</strong> Track whether growth in community activity is sustained and whether acute-care trends remain stable in newer reporting periods.</p>
+<p class="interpretation"><strong>Next check:</strong> See whether community activity continues to rise and whether the acute-care pattern stays stable in newer reporting periods.</p>
 :::
 :::
 
-<div class="figure-question">Management question 2</div>
+<div class="figure-question">Question 2</div>
 
 ### Which indicators changed most over five years?
 
@@ -138,7 +138,7 @@ Indexing allows the direction and scale of change to be compared across indicato
 :::
 
 ::: {.figure-reading}
-### Reading the chart
+### What stands out
 
 - `r metrics$largest_community$region` recorded the largest community-contact increase: **`r fmt_pct(metrics$largest_community$five_year_change_pct)`**.
 - `r metrics$largest_ed_decrease$region` recorded the largest ED change: a **`r fmt_pct(abs(metrics$largest_ed_decrease$five_year_change_pct))` decrease**.
@@ -150,7 +150,7 @@ Indexing allows the direction and scale of change to be compared across indicato
 
 ## Latest regional profile {#profile}
 
-<div class="figure-question">Management question 3</div>
+<div class="figure-question">Question 3</div>
 
 ### Which PHNs recorded the highest latest rates?
 
@@ -160,7 +160,7 @@ Indexing allows the direction and scale of change to be compared across indicato
 :::
 
 ::: {.figure-reading}
-### Reading the chart
+### What stands out
 
 `r latest_profile_rates(briefing)`
 
@@ -177,9 +177,9 @@ briefing |> latest_rate_table() |>
 ```
 :::
 
-## Operational review {#review}
+## Where the latest year changed {#review}
 
-<div class="figure-question">Management question 4</div>
+<div class="figure-question">Question 4</div>
 
 ### Where did acute activity grow faster than community contacts?
 
@@ -189,13 +189,13 @@ briefing |> latest_rate_table() |>
 :::
 
 ::: {.figure-reading}
-### Reading the chart
+### What stands out
 
 Both acute indicators grew faster than community contacts in every PHN in the latest year.
 
 `r metrics$largest_latest_ed$region` recorded the largest ED growth gap: **`r fmt_pct(metrics$largest_latest_ed$ed_change_pct)` ED growth** compared with **`r fmt_pct(metrics$largest_latest_ed$community_change_pct)` community-contact growth**.
 
-<p class="interpretation"><strong>Interpretation:</strong> These differences identify questions for review. They are not performance thresholds and do not show that changes in community care caused acute activity.</p>
+<p class="interpretation"><strong>Read with care:</strong> These differences point to questions, not performance thresholds. They do not show that changes in community care caused the rise in acute activity.</p>
 :::
 :::
 
@@ -208,11 +208,11 @@ briefing |> operational_review_table() |>
   knitr::kable(format = "html", align = c("l", "r", "r", "r", "r"))
 ```
 
-<div class="priority-note"><strong>Priority observation:</strong> `r metrics$largest_latest_ed$region`'s ED rate remained the lowest of the three PHNs, but its latest annual increase was the largest. Review both the level and the change.</div>
+<div class="priority-note"><strong>Worth noting:</strong> `r metrics$largest_latest_ed$region`'s ED rate remained the lowest of the three PHNs, but its latest annual increase was the largest. The level and the change tell different parts of the story.</div>
 :::
 
 ::: {}
-### Questions for operational review
+### Questions raised by the data
 
 1. Did demand, case complexity or clinical acuity change in 2023–24?
 2. Were there changes in access, waiting times, capacity, opening hours or referral pathways?
@@ -237,7 +237,7 @@ The reproducible R workflow:
 5. indexes series to 2018–19; and
 6. compares regional ranges and latest-year acute/community growth.
 
-No modelling or significance testing is used. The purpose is transparent descriptive analysis for performance reporting and operational review.
+No modelling or significance testing is used. This is a transparent descriptive comparison intended to support reporting and identify questions for follow-up.
 
 <div class="reproduce"><strong>Reproduce locally</strong><br><code>Rscript analysis.R</code><br><code>quarto render</code></div>
 :::
